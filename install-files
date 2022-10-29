@@ -1,0 +1,6 @@
+.bashrc
+.config/aliasy
+.config/nvim/init.vim
+.config/starship.toml
+.config/vars
+bin

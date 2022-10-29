@@ -9,4 +9,9 @@ $SUDO dnf install \
     fzf \
     skim \
     bat \
-    neovim
+    neovim \
+    git \
+    curl \
+    oathtool \
+    gopass \
+    tmux
