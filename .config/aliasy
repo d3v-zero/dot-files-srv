@@ -1,2 +1,148 @@
+source $HOME/.config/vars
+
+alias .a="$EDITOR $HOME/.config/aliasy && source $HOME/.config/aliasy"
+alias .b="$EDITOR $HOME/.bashrc"
+alias .d="$HOME/bin/dotfiles.sh"
+alias .g="$EDITOR $HOME/.gitconfig"
+alias .s="$EDITOR $HOME/.ssh/config"
+alias .ss="$EDITOR $HOME/.config/starship.toml"
+alias .t="$EDITOR $HOME/.tmux.conf"
+alias .v="$EDITOR $HOME/.config/nvim/init.vim"
+alias .va="$EDITOR $HOME/.config/vars"
 alias detect-os=$HOME/bin/detect-os.sh
-alias gp=$HOME/bin/gp.sh
+alias sudo=$SUDO
+
+# Fedora
+alias di="$SUDO dnf install"
+alias dr="$SUDO dnf remove"
+alias ds="$HOME/bin/ds.sh"
+alias update="$HOME/bin/update.sh"
+
+alias ...="cd ../.."
+alias ..="cd .."
+alias path="echo $PATH|tr \":\" \"\n\""
+
+alias dchmod="$HOME/bin/dchmod.sh"
+alias fchmod="$HOME/bin/fchmod.sh"
+
+alias ll="$HOME/bin/ll.sh"
+alias lm="$HOME/bin/lm.sh"  # exa pliki posortowane po dacie modyfikacij
+alias l="ll"
+alias f="ls -A|wc -l"
+
+alias md="mkcdir"
+alias mkcdir="source $HOME/bin/mkcdir.sh $1"
+alias mkdir="mkdir -p"
+
+alias lsx="ls -F | grep '*$'"  # pokazuje pliki wykonywalne w lokalizacji
+
+alias exa-tree="$HOME/bin/exa-tree.sh"
+
+alias cleartemp="$HOME/bin/cleartemp.sh"
+
+# Kopie zapasowe
+
+alias backup-dir="$HOME/bin/backup-dir.sh"
+
+# System plików / pamięć
+
+alias df="df -h"
+alias dfr="df -h /"
+alias free="free -m"
+alias cryptsetup="$SUDO cryptsetup"
+
+# Skróty do programów
+
+alias b=bat
+alias cs="clear"
+alias h="history"
+alias man="$HOME/bin/man-nvim.sh"
+alias more="less"
+alias n="nvim"
+alias q=exit
+alias so=source
+alias svim="$SUDO nvim"
+alias t=tmux
+alias b=bat
+alias c=cat
+alias c=bat
+alias ta="tmux atta"
+alias wg="$SUDO wg"
+alias wg="$SUDO wg"
+alias ta="$HOME/bin/ta.sh"
+alias tls="tmux ls"
+alias c=cat
+alias b=bat
+alias cat="bat --plain"
+alias cls="clear"
+
+# Procesy
+
+alias kp=~/bin/kp.sh
+alias k=kp
+alias pg="$HOME/bin/pg.sh"
+
+# Git
+
+alias g="git"
+alias ga="$HOME/bin/ga.sh"
+alias gd="$HOME/bin/gd.sh"
+alias gdiff="$HOME/bin/gd.sh"
+alias gi="$HOME/bin/gi.sh"
+alias gl="$HOME/bin/gl.sh"
+alias gp="$HOME/bin/gp.sh"
+alias gps="$HOME/bin/gps.sh"
+alias gs="$HOME/bin/gs.sh"
+alias pu="$HOME/bin/pu.sh"
+alias push="$HOME/bin/push.sh"
+
+alias gist-create="$HOME/bin/gist-create.sh"
+alias gist-edit="$HOME/bin/gist-edit.sh"
+alias gist-view="$HOME/bin/gist-view.sh"
+alias gist-delete="$HOME/bin/gist-delete.sh"
+
+# Szyfrowanie / hasła
+
+alias otp-add="$HOME/bin/otp-add.sh"
+alias otp="$HOME/bin/otp.sh"
+alias p=" gopass"
+alias pass=" gopass"
+alias gopass=" gopass"
+alias passf="$HOME/bin/passf.sh"
+
+alias pwgen="$HOME/bin/pwgen.sh"
+
+alias dec="$HOME/bin/DecryptGPG.sh"
+alias enc="$HOME/bin/EncryptGPG.sh"
+alias DecryptGPG="$HOME/bin/DecryptGPG.sh"
+alias DecryptSSL="$HOME/bin/DecryptSSL.sh"
+alias EncryptGPG="$HOME/bin/EncryptGPG.sh"
+alias EncryptSSL="$HOME/bin/EncryptSSL.sh"
+
+alias vhdmk="$HOME/bin/vhdmk.sh"
+alias vhdmount="$HOME/bin/vhdmount.sh"
+alias vhdumount="$HOME/bin/vhdumount.sh"
+
+# systemctl, zarządzanie usługami
+
+alias suspend="$SUDO systemctl suspend"
+alias sysdis="$SUDO systemctl disable"
+alias sysena="$SUDO systemctl enable"
+alias sysstart="$SUDO systemctl start"
+alias sysstop="$SUDO systemctl stop"
+
+alias reboot="$SUDO reboot"
+
+# Wyszukiwanie i przeszukiwanie
+
+alias rgvi="$HOME/bin/rgvi.sh"
+alias se="$HOME/bin/se.sh"
+alias sedi="$HOME/bin/sedi.sh"
+alias sefi="$HOME/bin/sefi.sh"
+alias vf="$HOME/bin/vf.sh"
+alias vs="$HOME/bin/vs.sh"
+
+alias last-edit="$HOME/bin/last-edit.sh"
+
+alias fdh="fd --hidden"
+alias rgh="rg --hidden"

@@ -26,9 +26,7 @@ fi
 
 unset rc
 
-export EDITOR=nvim
-
-alias n=nvim
-alias q=exit
+source $HOME/.config/vars
+source $HOME/.config/aliasy
 
 eval "$(starship init bash)"
