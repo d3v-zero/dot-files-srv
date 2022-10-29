@@ -1,0 +1,8 @@
+[package]
+disabled = true
+
+[directory]
+truncate_length = 5
+truncate_to_repo = false
+read_only_style = "red"
+format = "[$path]($style)[$read_only]($read_only_style) "
