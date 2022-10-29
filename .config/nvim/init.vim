@@ -75,7 +75,7 @@ nmap <leader>b :Buffers<cr>
 nmap <leader>r :source $MYVIMRC<cr>
 nmap <leader>o :only<cr>
 nmap <leader>; :
-nmap <leader>i 2<c-g>
+nmap <leader>l :FileInfo<cr>
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>u :UndotreeToggle<cr>
 nmap <silent> <leader>, :bp<cr>
@@ -105,8 +105,6 @@ tmap <c-h> <c-\><c-n><c-w>h
 tmap <c-j> <c-\><c-n><c-w>j
 tmap <c-k> <c-\><c-n><c-w>k
 tmap <c-l> <c-\><c-n><c-w>l
-
-nnoremap <leader>l :echo resolve(expand("%:p"))<cr>
 
 nmap <c-_> :Commentary<cr>
 vmap <c-_> :Commentary<cr>
@@ -189,17 +187,18 @@ function! GP()
     redraw!
 endfunction
 
-function! FileTime()
-    let filename=expand('%:p')
+function! FileInfo()
+    let filename=resolve(expand("%:p"))
     let msg=""
     let msg=msg."Mod: ".strftime("%F %T",getftime(filename))." ".filename
     echom msg
 endfunction
 
-command! FileTime call FileTime()
+command! FileInfo call FileInfo()
 command! GP call GP()
 command! S :source %
 command! -nargs=1 Tag call Tag(<f-args>)
 command! Time call Time()
 command! RevBackground call RevBackground()
 command! Write call Write()
+command! PI :PlugInstall
