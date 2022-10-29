@@ -175,6 +175,14 @@ function! GP()
     redraw!
 endfunction
 
+function! FileTime()
+    let filename=expand('%:p')
+    let msg=""
+    let msg=msg."Mod: ".strftime("%F %T",getftime(filename))." ".filename
+    echom msg
+endfunction
+
+command! FileTime call FileTime()
 command! GP call GP()
 command! S :source %
 command! -nargs=1 Tag call Tag(<f-args>)
