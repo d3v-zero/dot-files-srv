@@ -1,0 +1,2 @@
+alias detect-os=$HOME/bin/detect-os.sh
+alias gp=$HOME/bin/gp.sh
