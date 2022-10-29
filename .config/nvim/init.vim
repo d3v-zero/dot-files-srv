@@ -78,6 +78,7 @@ nmap <leader>; :
 nmap <leader>l :FileInfo<cr>
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>u :UndotreeToggle<cr>
+nmap <leader>? :ToggleVimTips<cr>
 nmap <silent> <leader>, :bp<cr>
 nmap <silent> <leader>. :bn<cr>
 nmap <leader>d :bd<cr>
@@ -194,6 +195,21 @@ function! FileInfo()
     echom msg
 endfunction
 
+let g:MyVimTips="off"
+function! ToggleVimTips()
+    if g:MyVimTips == "on"
+        let g:MyVimTips="off"
+        pclose
+    else
+        let g:MyVimTips="on"
+        botright pedit ++edit +setlocal\ buftype=nofile\ bufhidden=hide\ nobuflisted\ noswapfile ~/git/dot-files-srv/README.md
+        wincmd w            " zmienia na okno po prawej
+        set nornu nonu      " wyłącza numerowanie linii
+        vertical resize 40  " ustawia szerokość okna na 40 znaków
+    endif
+endfunction
+
+command! ToggleVimTips call ToggleVimTips()
 command! FileInfo call FileInfo()
 command! GP call GP()
 command! S :source %
