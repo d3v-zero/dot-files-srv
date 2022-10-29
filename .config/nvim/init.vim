@@ -2,6 +2,8 @@ call plug#begin()
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-eunuch'
     Plug 'tmsvg/pear-tree'
+    Plug 'jamessan/vim-gnupg'
+    Plug 'Yggdroot/indentLine'
 call plug#end()
 
 set hidden
@@ -134,6 +136,16 @@ autocmd Filetype help nnoremap <leader>l <c-]>
 autocmd Filetype help nnoremap <leader>h <c-t>
 
 autocmd FileType apache setlocal commentstring=#\ %s
+
+" indentLine
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 1
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+let g:indentLine_setColors = 0
+let g:indentLine_fileTypeExclude = [ "vimwiki", "help", "undotree", "diff", "nerdtree" ]
+let g:indentLine_bufTypeExclude = [ "help", "terminal" ]
 
 function! RevBackground()
     if &background=="light"
