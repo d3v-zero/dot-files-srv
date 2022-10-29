@@ -53,12 +53,7 @@ set undofile
 set undodir=~/.vim/undodir
 set viminfo+=n$HOME/.vim/viminfo/viminfo
 set viewdir=$HOME/.vim/view
-packadd! gruvbox-material
-colorscheme gruvbox
-let ayucolor="dark"   " for dark version of theme
-let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-" colorscheme ayu
+colorscheme kanagawa
 
 " Skróty klawiszowe
 let mapleader="\<space>"
