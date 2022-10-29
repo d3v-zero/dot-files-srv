@@ -1,5 +1,7 @@
 call plug#begin()
     Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-eunuch'
+    Plug 'tmsvg/pear-tree'
 call plug#end()
 
 set hidden
