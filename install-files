@@ -3,4 +3,5 @@
 .config/nvim/init.vim
 .config/starship.toml
 .config/vars
+.tmux.conf
 bin
