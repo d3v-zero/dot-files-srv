@@ -143,6 +143,9 @@ cmap <c-l> <right>
 
 cmap <c-r>p <c-r>"
 
+nmap <c-n> <plug>(signify-next-hunk)
+nmap <c-p> <plug>(signify-prev-hunk)
+
 let g:floaterm_keymap_toggle = '<leader>t'
 let g:floaterm_keymap_kill = '<leader>k'
 
