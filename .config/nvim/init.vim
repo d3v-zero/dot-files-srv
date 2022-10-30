@@ -1,23 +1,30 @@
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin()
-    Plug 'ayu-theme/ayu-vim'
-    Plug 'sainnhe/gruvbox-material'
-    Plug 'jamessan/vim-gnupg'
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
-    Plug 'LunarVim/horizon.nvim'
-    Plug 'mbbill/undotree'
-    Plug 'mhinz/vim-signify'
-    Plug 'morhetz/gruvbox'
-    Plug 'overcache/NeoSolarized'
-    Plug 'preservim/nerdtree'
-    Plug 'rebelot/kanagawa.nvim'
-    Plug 'tmsvg/pear-tree'
-    Plug 'tpope/vim-commentary'
-    Plug 'tpope/vim-eunuch'
-    Plug 'tpope/vim-fugitive'
-    Plug 'vim-scripts/AutoComplPop'
-    Plug 'voldikss/vim-floaterm'
-    Plug 'Yggdroot/indentLine'
+    Plug 'ayu-theme/ayu-vim'                    " schemat kolorystyczny
+    Plug 'bluz71/vim-nightfly-guicolors'        " schemat kolorystyczny
+    Plug 'jamessan/vim-gnupg'                   " szyfrowanie za pomcą GnuPG
+    Plug 'junegunn/fzf'                         " wyszukiwanie
+    Plug 'junegunn/fzf.vim'                     " wyszukiwanie
+    Plug 'LunarVim/horizon.nvim'                " schemat kolorystyczny
+    Plug 'mbbill/undotree'                      " drzewo zmian
+    Plug 'mhinz/vim-signify'                    " wizualna pomoc przy pepozytoriach git
+    Plug 'morhetz/gruvbox'                      " schemat kolorystyczny
+    Plug 'overcache/NeoSolarized'               " schemat kolorystyczny
+    Plug 'preservim/nerdtree'                   " menadżer plików
+    Plug 'rebelot/kanagawa.nvim'                " schemat kolorystyczny
+    Plug 'sainnhe/gruvbox-material'             " schemat kolorystyczny
+    Plug 'tmsvg/pear-tree'                      " automatyczne zamykanie ''
+    Plug 'tpope/vim-commentary'                 " szybkie komentowanie linii
+    Plug 'tpope/vim-eunuch'                     " polecenia systemu Linux np: Chmod
+    Plug 'tpope/vim-fugitive'                   " obsługa repozytoriów git
+    Plug 'vim-scripts/AutoComplPop'             " automatyczne uzupełnianie
+    Plug 'voldikss/vim-floaterm'                " latająco terminal
+    Plug 'Yggdroot/indentLine'                  " pionowe prowadnice
 call plug#end()
 
 syntax on
@@ -91,6 +98,7 @@ nmap <silent> <leader>. :bn<cr>
 nmap <leader>d :bd<cr>
 nmap <leader>vs :vs<cr>
 nmap <leader>sp :sp<cr>
+nmap <leader>sx <c-w>q<cr>
 nmap <leader>c :call RevBackground()<cr>
 nmap <tab> :e #<cr>
 
