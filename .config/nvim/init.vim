@@ -114,9 +114,6 @@ nnoremap <m-j> <cmd>resize +2<cr>")
 nnoremap <m-k> <cmd>resize -2<cr>")
 nnoremap <m-l> <cmd>vertical resize +2<cr>")
 
-nnoremap <leader>vs <cmd>vs<cr>
-nnoremap <leader>sp <cmd>sp<cr>
-
 tmap <c-h> <c-\><c-n><c-w>h
 tmap <c-j> <c-\><c-n><c-w>j
 tmap <c-k> <c-\><c-n><c-w>k
@@ -220,7 +217,7 @@ function! ToggleVimTips()
         pclose
     else
         let g:MyVimTips="on"
-        botright pedit ++edit +setlocal\ buftype=nofile\ bufhidden=hide\ nobuflisted\ noswapfile ~/git/dot-files-srv/README.md
+        botright pedit ++edit +setlocal\ buftype=nofile\ bufhidden=hide\ nobuflisted\ noswapfile ~/git/dot-files-srv/Vim.md
         wincmd w            " zmienia na okno po prawej
         set nornu nonu      " wyłącza numerowanie linii
         vertical resize 40  " ustawia szerokość okna na 40 znaków
