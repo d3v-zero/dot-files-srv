@@ -1,14 +1,26 @@
 call plug#begin()
+    Plug 'ayu-theme/ayu-vim'
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'jamessan/vim-gnupg'
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
+    Plug 'LunarVim/horizon.nvim'
+    Plug 'mbbill/undotree'
+    Plug 'mhinz/vim-signify'
+    Plug 'morhetz/gruvbox'
+    Plug 'overcache/NeoSolarized'
+    Plug 'preservim/nerdtree'
+    Plug 'rebelot/kanagawa.nvim'
+    Plug 'tmsvg/pear-tree'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-eunuch'
-    Plug 'tmsvg/pear-tree'
-    Plug 'jamessan/vim-gnupg'
+    Plug 'tpope/vim-fugitive'
+    Plug 'vim-scripts/AutoComplPop'
+    Plug 'voldikss/vim-floaterm'
     Plug 'Yggdroot/indentLine'
 call plug#end()
 
-set hidden
 syntax on
-
 set hidden
 set number
 set relativenumber
