@@ -101,6 +101,7 @@ nmap <leader>sp :sp<cr>
 nmap <leader>sx <c-w>q<cr>
 nmap <leader>c :call RevBackground()<cr>
 nmap <tab> :e #<cr>
+nmap <bs> daw
 
 nnoremap <esc> :noh<cr><esc>
 
