@@ -69,9 +69,9 @@ set wildmode=longest:full,full
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set undofile
-set undodir=~/.vim/undodir
-set viminfo+=n$HOME/.vim/viminfo/viminfo
-set viewdir=$HOME/.vim/view
+set undodir=~/.config/nvim/undodir
+set viminfo+=n$HOME/.config/nvim/viminfo/viminfo
+set viewdir=$HOME/.config/nvim/view
 colorscheme kanagawa
 
 " Skróty klawiszowe
