@@ -80,6 +80,8 @@ Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 | `<c-k>`        | Kursor w górę                                                 |
 | `<c-l>`        | Kursor w prawo                                                |
 | `<tab>`        | Wybór wybranej automatycznej podpowiedzi                      |
+| `<c-n>`        | Poruszanie się w automatycznych podpowiedziach - w dół        |
+| `<c-p>`        | Poruszanie się w automatycznych podpowiedziach - w górę       |
 
 ## Skróty klawiszowe w trybie COMMAND
 
