@@ -1,6 +1,8 @@
 # Vim
 
-## Skróty klawiszowe w trybie NORMAL
+## Skróty klawiszowe
+
+### Skróty klawiszowe w trybie NORMAL
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
@@ -54,13 +56,13 @@
 | `<leader>l`    | W plikach pomocy Vim przechodzi do linku pod kursorem         |
 | `<leader>h`    | W plikach pomocy Vim przechodzi do poprzedniej strony         |
 
-## Skróty klawiszowe trybie VISUAL
+### Skróty klawiszowe trybie VISUAL
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
 | `<c-/>`        | Uruchamia plugin Commentary na zaznaczonych liniach           |
 
-## Skróty klawiszowe terminal
+### Skróty klawiszowe terminal
 
 Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 
@@ -71,7 +73,7 @@ Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 | `<c-k>`        | Przechodzi do okna wyżej                                      |
 | `<c-l>`        | Przechodzi do okna po prawej                                  |
 
-## Skróty klawiszowe w trybie INSERT
+### Skróty klawiszowe w trybie INSERT
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
@@ -83,7 +85,7 @@ Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 | `<c-n>`        | Poruszanie się w automatycznych podpowiedziach - w dół        |
 | `<c-p>`        | Poruszanie się w automatycznych podpowiedziach - w górę       |
 
-## Skróty klawiszowe w trybie COMMAND
+### Skróty klawiszowe w trybie COMMAND
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
@@ -92,3 +94,29 @@ Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 | `<c-k>`        | Poruszanie się w historii komend                              |
 | `<c-l>`        | Kursor w linii komend w prawo                                 |
 | `<c-r>p`       | Wkleja zawartość schowka do linii komend                      |
+
+## Zainstalowane pluginy
+
+| Plugin                 | Opis                                         |
+|------------------------|----------------------------------------------|
+| ayu-vim                |  schemat kolorystyczny                       |
+| vim-nightfly-guicolors |  schemat kolorystyczny                       |
+| vim-gnupg              |  szyfrowanie za pomcą GnuPG                  |
+| fzf                    |  wyszukiwanie plików                         |
+| fzf.vim                |  Wyszukiwanie plików                         |
+| horizon.nvim           |  schemat kolorystyczny                       |
+| undotree               |  drzewo zmian                                |
+| vim-signify            |  wizualna pomoc przy pepozytoriach git       |
+| gruvbox                |  schemat kolorystyczny                       |
+| NeoSolarized           |  schemat kolorystyczny                       |
+| nerdtree               |  menadżer plików                             |
+| kanagawa.nvim          |  schemat kolorystyczny                       |
+| gruvbox-material       |  schemat kolorystyczny                       |
+| pear-tree              |  automatyczne zamykanie ''                   |
+| vim-commentary         |  szybkie komentowanie linii                  |
+| vim-eunuch             |  polecenia systemu Linux np: Chmod, Delete   |
+| vim-fugitive           |  obsługa repozytoriów git                    |
+| AutoComplPop           |  automatyczne uzupełnianie                   |
+| vim-floaterm           |  latający terminal                           |
+| indentLine             |  pionowe prowadnice                          |
+

@@ -8,8 +8,8 @@ call plug#begin()
     Plug 'ayu-theme/ayu-vim'                    " schemat kolorystyczny
     Plug 'bluz71/vim-nightfly-guicolors'        " schemat kolorystyczny
     Plug 'jamessan/vim-gnupg'                   " szyfrowanie za pomcą GnuPG
-    Plug 'junegunn/fzf'                         " wyszukiwanie
-    Plug 'junegunn/fzf.vim'                     " wyszukiwanie
+    Plug 'junegunn/fzf'                         " wyszukiwanie plików
+    Plug 'junegunn/fzf.vim'                     " wyszukiwanie plików
     Plug 'LunarVim/horizon.nvim'                " schemat kolorystyczny
     Plug 'mbbill/undotree'                      " drzewo zmian
     Plug 'mhinz/vim-signify'                    " wizualna pomoc przy pepozytoriach git
@@ -20,10 +20,10 @@ call plug#begin()
     Plug 'sainnhe/gruvbox-material'             " schemat kolorystyczny
     Plug 'tmsvg/pear-tree'                      " automatyczne zamykanie ''
     Plug 'tpope/vim-commentary'                 " szybkie komentowanie linii
-    Plug 'tpope/vim-eunuch'                     " polecenia systemu Linux np: Chmod
+    Plug 'tpope/vim-eunuch'                     " polecenia systemu Linux np: Chmod, Delete
     Plug 'tpope/vim-fugitive'                   " obsługa repozytoriów git
     Plug 'vim-scripts/AutoComplPop'             " automatyczne uzupełnianie
-    Plug 'voldikss/vim-floaterm'                " latająco terminal
+    Plug 'voldikss/vim-floaterm'                " latający terminal
     Plug 'Yggdroot/indentLine'                  " pionowe prowadnice
 call plug#end()
 
