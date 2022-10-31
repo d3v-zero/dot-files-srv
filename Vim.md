@@ -1,6 +1,6 @@
 # Vim
 
-## Skróty klawiszowe
+## Skróty klawiszowe w trybie NORMAL
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
@@ -45,33 +45,48 @@
 | `dl`           | Kasuje od kursora do końca linii                              |
 | `Y`            | Kopiuje od kursora do końca linii                             |
 | `J`            | Łączy linie                                                   |
+| `<c-/>`        | Uruchamia plugin Commentary w bieżącej linii                  |
+| `<c-n>`        | Przechodzi do następnej zmiany plugin Signify                 |
+| `<c-p>`        | Przechodzi do poprzedniej zmiany plugin Signify               |
+| `<leader>5`    | Uruchamia skrypt Shell / Python itp.                          |
+| `<leader>t`    | Pokazuje / chowa pływający termnal - plugin Floaterm          |
+| `<leader>k`    | Wyłącza sesje uruchomionego terminala - plugin Floaterm       |
+| `<leader>l`    | W plikach pomocy Vim przechodzi do linku pod kursorem         |
+| `<leader>h`    | W plikach pomocy Vim przechodzi do poprzedniej strony         |
 
-```
-tmap <c-h> <c-\><c-n><c-w>h
-tmap <c-j> <c-\><c-n><c-w>j
-tmap <c-k> <c-\><c-n><c-w>k
-tmap <c-l> <c-\><c-n><c-w>l
+## Skróty klawiszowe trybie VISUAL
 
-nmap <c-_> :Commentary<cr>
-vmap <c-_> :Commentary<cr>
+| Skrót          | Opis                                                          |
+|----------------|---------------------------------------------------------------|
+| `<c-/>`        | Uruchamia plugin Commentary na zaznaczonych liniach           |
 
-nmap <c-n> <plug>(signify-next-hunk)
-nmap <c-p> <plug>(signify-prev-hunk)
+## Skróty klawiszowe terminal
 
-nnoremap <leader>5 :Write<cr>:!./%<cr>
+Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 
-inoremap <expr> <TAB> pumvisible() ? "<C-y>":"<TAB>"
+| Skrót          | Opis                                                          |
+|----------------|---------------------------------------------------------------|
+| `<c-h>`        | Przechodzi do okna po lewej                                   |
+| `<c-j>`        | Przechodzi do okna nizej                                      |
+| `<c-k>`        | Przechodzi do okna wyżej                                      |
+| `<c-l>`        | Przechodzi do okna po prawej                                  |
 
-cmap <c-k> <up>
-cmap <c-j> <down>
-cmap <c-h> <left>
-cmap <c-l> <right>
+## Skróty klawiszowe w trybie INSERT
 
-cmap <c-r>p <c-r>"
+| Skrót          | Opis                                                          |
+|----------------|---------------------------------------------------------------|
+| `<c-h>`        | Kursor w lewo                                                 |
+| `<c-j>`        | Kursor w dół                                                  |
+| `<c-k>`        | Kursor w górę                                                 |
+| `<c-l>`        | Kursor w prawo                                                |
+| `<tab>`        | Wybór wybranej automatycznej podpowiedzi                      |
 
-let g:floaterm_keymap_toggle = '<leader>t'
-let g:floaterm_keymap_kill = '<leader>k'
+## Skróty klawiszowe w trybie COMMAND
 
-autocmd Filetype help nnoremap <leader>l <c-]>
-autocmd Filetype help nnoremap <leader>h <c-t>
-```
+| Skrót          | Opis                                                          |
+|----------------|---------------------------------------------------------------|
+| `<c-h>`        | Kursor w linii komend w lewo                                  |
+| `<c-j>`        | Poruszanie się w historii komend                              |
+| `<c-k>`        | Poruszanie się w historii komend                              |
+| `<c-l>`        | Kursor w linii komend w prawo                                 |
+| `<c-r>p`       | Wkleja zawartość schowka do linii komend                      |
