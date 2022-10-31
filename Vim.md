@@ -118,5 +118,5 @@ Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 | vim-fugitive           |  obsługa repozytoriów git                    |
 | AutoComplPop           |  automatyczne uzupełnianie                   |
 | vim-floaterm           |  latający terminal                           |
-| indentLine             |  pionowe prowadnice                          |
+| indentLine             |  prowadnice pionowe                          |
 
