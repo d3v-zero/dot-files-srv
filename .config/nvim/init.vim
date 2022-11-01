@@ -226,7 +226,7 @@ function! Write()
 endfunction
 
 function! GP()
-    silent execute ':!$HOME/bin/gp.sh %:p'
+    silent execute ':!$HOME/bin/gp-vim.sh %:p'
     redraw!
 endfunction
 

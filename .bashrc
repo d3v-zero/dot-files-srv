@@ -43,6 +43,7 @@ HISTSIZE=100000
 HISTTIMEFORMAT='%F %T'
 PROMPT_COMMAND='history -a'  # zapisuje historię poleceń od razu
 
+# ustawienia GnuPG
 eval $(gpg-agent --daemon)
 GPG_TTY=$(tty)
 export GPG_TTY
