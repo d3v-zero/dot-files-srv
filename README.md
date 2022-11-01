@@ -16,3 +16,5 @@
 - skim
 - tmux
 - zoxide
+
+Skrypt sprawdzający zainstalowane oprogramowaniw $HOME/bin/check-software.sh
