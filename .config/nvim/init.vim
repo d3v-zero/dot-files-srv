@@ -7,6 +7,7 @@ endif
 call plug#begin()
     Plug 'ayu-theme/ayu-vim'                    " schemat kolorystyczny
     Plug 'bluz71/vim-nightfly-guicolors'        " schemat kolorystyczny
+    Plug 'ggandor/leap.nvim'                    " szybkie poruszanie się po pliku
     Plug 'jamessan/vim-gnupg'                   " szyfrowanie za pomcą GnuPG
     Plug 'junegunn/fzf'                         " wyszukiwanie plików
     Plug 'junegunn/fzf.vim'                     " wyszukiwanie plików
@@ -161,6 +162,31 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_setColors = 0
 let g:indentLine_fileTypeExclude = [ "vimwiki", "help", "undotree", "diff", "nerdtree" ]
 let g:indentLine_bufTypeExclude = [ "help", "terminal" ]
+
+lua require('leap').add_default_mappings()
+" lua << EOF
+"     require('leap').setup {
+"         case_sensitive = true,
+"         max_phase_one_targets = nil,
+"         highlight_unlabeled_phase_one_targets = false,
+"         max_highlighted_traversal_targets = 10,
+"         case_sensitive = false,
+"         equivalence_classes = { ' \t\r\n', },
+"         substitute_chars = {},
+"         safe_labels = { 's', 'f', 'n', 'u', 't', ... },
+"         labels = { 's', 'f', 'n', 'j', 'k', ... },
+"         special_keys = {
+"             repeat_search = '<enter>',
+"             next_phase_one_target = '<enter>',
+"             next_target = {'<enter>', ';'},
+"             prev_target = {'<tab>', ','},
+"             next_group = '<space>',
+"             prev_group = '<tab>',
+"             multi_accept = '<enter>',
+"             multi_revert = '<backspace>',
+"         }
+"     }
+" EOF
 
 function! RevBackground()
     if &background=="light"

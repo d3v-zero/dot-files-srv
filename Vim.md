@@ -99,24 +99,24 @@ Skróty klawiszowe dostępne po wydaniu polecenia `:term`
 
 | Plugin                 | Opis                                         |
 |------------------------|----------------------------------------------|
-| ayu-vim                |  schemat kolorystyczny                       |
-| vim-nightfly-guicolors |  schemat kolorystyczny                       |
-| vim-gnupg              |  szyfrowanie za pomcą GnuPG                  |
-| fzf                    |  wyszukiwanie plików                         |
-| fzf.vim                |  Wyszukiwanie plików                         |
-| horizon.nvim           |  schemat kolorystyczny                       |
-| undotree               |  drzewo zmian                                |
-| vim-signify            |  wizualna pomoc przy pepozytoriach git       |
-| gruvbox                |  schemat kolorystyczny                       |
-| NeoSolarized           |  schemat kolorystyczny                       |
-| nerdtree               |  menadżer plików                             |
-| kanagawa.nvim          |  schemat kolorystyczny                       |
-| gruvbox-material       |  schemat kolorystyczny                       |
-| pear-tree              |  automatyczne zamykanie ''                   |
-| vim-commentary         |  szybkie komentowanie linii                  |
-| vim-eunuch             |  polecenia systemu Linux np: Chmod, Delete   |
-| vim-fugitive           |  obsługa repozytoriów git                    |
-| AutoComplPop           |  automatyczne uzupełnianie                   |
-| vim-floaterm           |  latający terminal                           |
-| indentLine             |  prowadnice pionowe                          |
-
+| ayu-vim                | schemat kolorystyczny                        |
+| vim-nightfly-guicolors | schemat kolorystyczny                        |
+| vim-gnupg              | szyfrowanie za pomcą GnuPG                   |
+| fzf                    | wyszukiwanie plików                          |
+| fzf.vim                | Wyszukiwanie plików                          |
+| horizon.nvim           | schemat kolorystyczny                        |
+| undotree               | drzewo zmian                                 |
+| vim-signify            | wizualna pomoc przy pepozytoriach git        |
+| gruvbox                | schemat kolorystyczny                        |
+| NeoSolarized           | schemat kolorystyczny                        |
+| nerdtree               | menadżer plików                              |
+| kanagawa.nvim          | schemat kolorystyczny                        |
+| gruvbox-material       | schemat kolorystyczny                        |
+| pear-tree              | automatyczne zamykanie ''                    |
+| vim-commentary         | szybkie komentowanie linii                   |
+| vim-eunuch             | polecenia systemu Linux np: Chmod, Delete    |
+| vim-fugitive           | obsługa repozytoriów git                     |
+| AutoComplPop           | automatyczne uzupełnianie                    |
+| vim-floaterm           | latający terminal                            |
+| indentLine             | prowadnice pionowe                           |
+| leap.nvim              | szybkie poruszanie się po pliku              |

@@ -56,3 +56,5 @@ export GPG_TTY
 source <(gopass completion bash)
 
 eval "$(starship init bash)"
+
+eval "$(zoxide init bash)"
