@@ -17,4 +17,4 @@
 - tmux
 - zoxide
 
-Skrypt sprawdzający zainstalowane oprogramowaniw $HOME/bin/check-software.sh
+Skrypt sprawdzający zainstalowane oprogramowaniw `$HOME/bin/check-software.sh`
