@@ -107,6 +107,7 @@ nmap <leader>vs :vs<cr>
 nmap <leader>sp :sp<cr>
 nmap <leader>sx <c-w>q<cr>
 nmap <leader>c :call RevBackground()<cr>
+nmap <leader>K :call Kolory()<cr>
 nmap <tab> :e #<cr>
 nmap <bs> daw
 
@@ -189,7 +190,7 @@ let g:hackline_encoding = 1
 let g:hackline_tab_info = 1
 let g:hackline_label_modified = 2
 
-let g:hackline_sign = "NV"
+let g:hackline_sign = "Nvim"
 let g:hackline_hostname = "127.0.0.1"
 
 let g:hackline_custom_end = '
@@ -282,8 +283,8 @@ function! Kolory()
 endfunction
 
 function! CD()
-    let bmproj = readfile(expand('$HOME/.config/nvim/cd'))
-    call fzf#run(fzf#wrap({'source': bmproj,
+    let cd_file = readfile(expand('$HOME/.config/nvim/cd'))
+    call fzf#run(fzf#wrap({'source': cd_file,
         \ 'sink' : 'e',
         \ 'options' : '-m -x +s'}))
 endfunction
