@@ -51,7 +51,8 @@ set incsearch
 set ignorecase
 set smartcase
 set wrapscan
-set iskeyword+=-,.  " neutralizuje seperatory słowa `-` oraz `.`
+set fillchars=eob:=  " usuwa znak `~` na końcu bufora
+set iskeyword+=-,.   " neutralizuje seperatory słowa `-` oraz `.`
 set cmdheight=1
 set cursorline
 set lazyredraw
@@ -77,6 +78,7 @@ set undofile
 set undodir=~/.config/nvim/undodir
 set viminfo+=n$HOME/.config/nvim/viminfo/viminfo
 set viewdir=$HOME/.config/nvim/view
+set viewoptions-=options
 colorscheme kanagawa
 
 " Skróty klawiszowe
@@ -160,6 +162,9 @@ autocmd Filetype help nnoremap <leader>l <c-]>
 autocmd Filetype help nnoremap <leader>h <c-t>
 
 autocmd FileType apache setlocal commentstring=#\ %s
+
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent! loadview
 
 " indentLine
 let g:indentLine_first_char = ''
@@ -265,9 +270,9 @@ function! ToggleVimTips()
     else
         let g:MyVimTips="on"
         botright pedit ++edit +setlocal\ buftype=nofile\ bufhidden=hide\ nobuflisted\ noswapfile ~/git/dot-files-srv/Vim.md
-        wincmd w            " zmienia na okno po prawej
-        set nornu nonu      " wyłącza numerowanie linii
-        vertical resize 40  " ustawia szerokość okna na 40 znaków
+        wincmd w
+        set nornu nonu
+        vertical resize 40
     endif
 endfunction
 
