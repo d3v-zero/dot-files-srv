@@ -9,6 +9,7 @@ call plug#begin()
     Plug 'bluz71/vim-nightfly-guicolors'        " schemat kolorystyczny
     Plug 'ggandor/leap.nvim'                    " szybkie poruszanie się po pliku
     Plug 'jamessan/vim-gnupg'                   " szyfrowanie za pomcą GnuPG
+    Plug 'jssteinberg/hackline.vim'             " statusline
     Plug 'junegunn/fzf'                         " wyszukiwanie plików
     Plug 'junegunn/fzf.vim'                     " wyszukiwanie plików
     Plug 'LunarVim/horizon.nvim'                " schemat kolorystyczny
@@ -60,6 +61,7 @@ set timeoutlen=500
 set ttimeout
 set ttimeoutlen=500
 set textwidth=100
+set conceallevel=0
 set splitright
 set splitbelow
 set autoread
@@ -137,6 +139,7 @@ nmap dh xd0
 nmap dl d$
 nmap Y y$
 nnoremap J maJ`a
+nnoremap gf :edit <cfile><cr>
 
 inoremap <expr> <TAB> pumvisible() ? "<C-y>":"<TAB>"
 
@@ -168,6 +171,30 @@ let g:indentLine_setColors = 0
 let g:indentLine_fileTypeExclude = [ "vimwiki", "help", "undotree", "diff", "nerdtree" ]
 let g:indentLine_bufTypeExclude = [ "help", "terminal" ]
 
+" Plugin hackline
+let g:hackline_laststatus = 3
+let g:hackline_mode = 1
+let g:hackline_bufnr = 1
+let g:hackline_filetype = 1
+let g:hackline_ale = 0
+let g:hackline_nvim_lsp = 0
+let g:hackline_vim_lsp = 0
+let g:hackline_git = 1
+let g:hackline_encoding = 1
+let g:hackline_tab_info = 1
+let g:hackline_label_modified = 2
+
+let g:hackline_sign = "NV"
+let g:hackline_hostname = "127.0.0.1"
+
+let g:hackline_custom_end = '
+            \%( words %{hackline#base#wordcount()} %)
+            \%( %{hackline#base#filesize()} %)
+            \%( %{&fileformat} %)
+            \ %P/%L
+            \%( %{hackline_hostname}%)
+            \'
+
 lua require('leap').add_default_mappings()
 
 function! RevBackground()
@@ -189,6 +216,17 @@ function! Tag(name)
     normal! pbbl
     startinsert
 endfunction
+
+lua << EOF
+    local fn = vim.fn
+    MkDir = function()
+        local dir = fn.expand("%:p:h")
+
+        if fn.isdirectory(dir) == 0 then
+            fn.mkdir(dir, "p")
+        end
+    end
+EOF
 
 function! Write()
     if filereadable(expand("%"))
@@ -233,6 +271,20 @@ function! ToggleVimTips()
     endif
 endfunction
 
+function! Kolory()
+    let kolory = readfile(expand('$HOME/.config/nvim/kolory'))
+    call fzf#run(fzf#wrap({'source': kolory, 'sink' : 'colorscheme'}))
+endfunction
+
+function! CD()
+    let bmproj = readfile(expand('$HOME/.config/nvim/cd'))
+    call fzf#run(fzf#wrap({'source': bmproj,
+        \ 'sink' : 'e',
+        \ 'options' : '-m -x +s'}))
+endfunction
+
+command! CD call CD()
+command! Kolory call Kolory()
 command! ToggleVimTips call ToggleVimTips()
 command! FileInfo call FileInfo()
 command! GP call GP()

@@ -12,7 +12,7 @@ set nolist
 set hidden
 " set tabline=terefere
 " set showtabline=0
-set laststatus=0
+set laststatus=2
 set background=dark
 set termguicolors
 set timeout
