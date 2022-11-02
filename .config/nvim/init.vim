@@ -15,9 +15,11 @@ call plug#begin()
     Plug 'mbbill/undotree'                      " drzewo zmian
     Plug 'mhinz/vim-signify'                    " wizualna pomoc przy pepozytoriach git
     Plug 'morhetz/gruvbox'                      " schemat kolorystyczny
+    Plug 'ojroques/vim-oscyank'                 " kopiowanie tekstu z Vim przez SSH
     Plug 'overcache/NeoSolarized'               " schemat kolorystyczny
     Plug 'preservim/nerdtree'                   " menadżer plików
     Plug 'rebelot/kanagawa.nvim'                " schemat kolorystyczny
+    Plug 'sainnhe/everforest'                   " schemat kolorystyczny
     Plug 'sainnhe/gruvbox-material'             " schemat kolorystyczny
     Plug 'tmsvg/pear-tree'                      " automatyczne zamykanie ''
     Plug 'tpope/vim-commentary'                 " szybkie komentowanie linii
@@ -26,7 +28,6 @@ call plug#begin()
     Plug 'vim-scripts/AutoComplPop'             " automatyczne uzupełnianie
     Plug 'voldikss/vim-floaterm'                " latający terminal
     Plug 'Yggdroot/indentLine'                  " pionowe prowadnice
-    Plug 'ojroques/vim-oscyank'                 " kopiowanie tekstu z Vim przez SSH
 call plug#end()
 
 syntax on
@@ -168,29 +169,6 @@ let g:indentLine_fileTypeExclude = [ "vimwiki", "help", "undotree", "diff", "ner
 let g:indentLine_bufTypeExclude = [ "help", "terminal" ]
 
 lua require('leap').add_default_mappings()
-" lua << EOF
-"     require('leap').setup {
-"         case_sensitive = true,
-"         max_phase_one_targets = nil,
-"         highlight_unlabeled_phase_one_targets = false,
-"         max_highlighted_traversal_targets = 10,
-"         case_sensitive = false,
-"         equivalence_classes = { ' \t\r\n', },
-"         substitute_chars = {},
-"         safe_labels = { 's', 'f', 'n', 'u', 't', ... },
-"         labels = { 's', 'f', 'n', 'j', 'k', ... },
-"         special_keys = {
-"             repeat_search = '<enter>',
-"             next_phase_one_target = '<enter>',
-"             next_target = {'<enter>', ';'},
-"             prev_target = {'<tab>', ','},
-"             next_group = '<space>',
-"             prev_group = '<tab>',
-"             multi_accept = '<enter>',
-"             multi_revert = '<backspace>',
-"         }
-"     }
-" EOF
 
 function! RevBackground()
     if &background=="light"
