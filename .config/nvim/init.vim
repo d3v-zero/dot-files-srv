@@ -26,6 +26,7 @@ call plug#begin()
     Plug 'vim-scripts/AutoComplPop'             " automatyczne uzupełnianie
     Plug 'voldikss/vim-floaterm'                " latający terminal
     Plug 'Yggdroot/indentLine'                  " pionowe prowadnice
+    Plug 'ojroques/vim-oscyank'                 " kopiowanie tekstu z Vim przez SSH
 call plug#end()
 
 syntax on
@@ -120,6 +121,9 @@ tmap <c-h> <c-\><c-n><c-w>h
 tmap <c-j> <c-\><c-n><c-w>j
 tmap <c-k> <c-\><c-n><c-w>k
 tmap <c-l> <c-\><c-n><c-w>l
+
+nmap <leader>y <Plug>OSCYank
+vnoremap <leader>y :OSCYank<CR>
 
 nmap <c-_> :Commentary<cr>
 vmap <c-_> :Commentary<cr>

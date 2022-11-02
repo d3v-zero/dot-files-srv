@@ -55,12 +55,14 @@
 | `<leader>k`    | Wyłącza sesje uruchomionego terminala - plugin Floaterm       |
 | `<leader>l`    | W plikach pomocy Vim przechodzi do linku pod kursorem         |
 | `<leader>h`    | W plikach pomocy Vim przechodzi do poprzedniej strony         |
+| `<leader>y`    | Kopiowanie obiektu tekstowego przez SSH `<leader>yap`         |
 
 ### Skróty klawiszowe trybie VISUAL
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
 | `<c-/>`        | Uruchamia plugin Commentary na zaznaczonych liniach           |
+| `<leader>y`    | Kopiowanie zaznaczonego tekstu przez SSH                      |
 
 ### Skróty klawiszowe terminal
 
