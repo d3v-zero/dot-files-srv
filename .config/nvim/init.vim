@@ -79,6 +79,7 @@ set undodir=~/.config/nvim/undodir
 set viminfo+=n$HOME/.config/nvim/viminfo/viminfo
 set viewdir=$HOME/.config/nvim/view
 set viewoptions-=options
+set signcolumn=yes:1
 colorscheme kanagawa
 
 " Skróty klawiszowe
