@@ -222,7 +222,7 @@ let g:hackline_custom_end = '
             \%(%{&fileformat} %)
             \%l/%L %v
             \%( %{hackline_hostname} %)
-            \%{strftime("%T %F")}
+            \%{strftime("%H:%M")}
             \'
 
 lua require('leap').add_default_mappings()
