@@ -100,6 +100,7 @@ nmap <leader>b :Buffers<cr>
 nmap <leader>r :source $MYVIMRC<cr>
 nmap <leader>o :only<cr>
 nmap <leader>; :
+vmap <leader>; :
 nmap <leader>l :FileInfo<cr>
 nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>u :UndotreeToggle<cr>
@@ -218,11 +219,10 @@ let g:hackline_sign = "Nvim"
 let g:hackline_hostname = "127.0.0.1"
 
 let g:hackline_custom_end = '
-            \%( words %{hackline#base#wordcount()} %)
-            \%( %{hackline#base#filesize()} %)
-            \%( %{&fileformat} %)
-            \ %P/%L
-            \%( %{hackline_hostname}%)
+            \%(%{&fileformat} %)
+            \%l/%L %v
+            \%( %{hackline_hostname} %)
+            \%{strftime("%T %F")}
             \'
 
 lua require('leap').add_default_mappings()
@@ -334,3 +334,7 @@ command! PI :PlugInstall
 cabbr time Time
 cabbr gp GP
 cabbr pi PI
+
+if ! empty(glob('$HOME/.config/nvim/custom.vim'))
+    silent! source $HOME/.config/nvim/custom.vim
+endif
