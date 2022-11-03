@@ -16,7 +16,7 @@ call plug#begin()
     Plug 'mbbill/undotree'                      " drzewo zmian
     Plug 'mhinz/vim-signify'                    " wizualna pomoc przy pepozytoriach git
     Plug 'morhetz/gruvbox'                      " schemat kolorystyczny
-    Plug 'ojroques/vim-oscyank'                 " kopiowanie tekstu z Vim przez SSH
+    Plug 'ojroques/nvim-osc52'                  " kopiowanie tekstu z Vim przez SSH 
     Plug 'overcache/NeoSolarized'               " schemat kolorystyczny
     Plug 'preservim/nerdtree'                   " menadżer plików
     Plug 'rebelot/kanagawa.nvim'                " schemat kolorystyczny
@@ -110,7 +110,7 @@ nmap <leader>d :bd<cr>
 nmap <leader>vs :vs<cr>
 nmap <leader>sp :sp<cr>
 nmap <leader>sx <c-w>q<cr>
-nmap <leader>c :call RevBackground()<cr>
+nmap <leader>C :call RevBackground()<cr>
 nmap <leader>K :call Kolory()<cr>
 nmap <tab> :e #<cr>
 nmap <bs> daw
@@ -132,12 +132,20 @@ tmap <c-j> <c-\><c-n><c-w>j
 tmap <c-k> <c-\><c-n><c-w>k
 tmap <c-l> <c-\><c-n><c-w>l
 
-" <leader>yap kopiuje akapit
-nmap <leader>y <Plug>OSCYank
-vnoremap <leader>y :OSCYank<CR>
-
 nmap <c-_> :Commentary<cr>
 vmap <c-_> :Commentary<cr>
+
+lua << EOF
+    require('osc52').setup {
+        max_length = 0,  -- Maximum length of selection (0 for no limit)
+        silent = false,  -- Disable message on successful copy
+        trim = false,    -- Trim text before copy
+    }
+
+    vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, {expr = true})
+    vim.keymap.set('n', '<leader>cc', '<leader>c_', {remap = true})
+    vim.keymap.set('x', '<leader>c', require('osc52').copy_visual)
+EOF
 
 nnoremap <leader>5 :Write<cr>:!./%<cr>
 
@@ -152,7 +160,7 @@ nnoremap J maJ`a
 nnoremap gf :edit <cfile><cr>
 nmap <cr> o
 nmap <s-cr> O
-" ^M tworzymy za pomocą kombinacji: <ctrl-v> <shift+enter>
+" symbol ^M generujemy pomocą kombinacji: <ctrl-v> <shift+enter>
 " nmap  O  
 
 inoremap <expr> <TAB> pumvisible() ? "<C-y>":"<TAB>"

@@ -26,7 +26,7 @@
 | `<leader>n`    | Uruchamia menadżer plików NERDTree                            |
 | `<leader>u`    | Wyświetla listę zmian Undotree                                |
 | `<leader>?`    | Wyświetla plik Vim.md                                         |
-| `<leader>c`    | Zmienia kolor tłą jasne / ciemne                              |
+| `<leader>C`    | Zmienia kolor tłą jasne / ciemne                              |
 | `<leader>,`    | Przechodzi do poprzedniego bufora                             |
 | `<leader>.`    | Przechodzi do następnego bufora                               |
 | `<leader>d`    | Zamyka bufor                                                  |
@@ -55,14 +55,15 @@
 | `<leader>k`    | Wyłącza sesje uruchomionego terminala - plugin Floaterm       |
 | `<leader>l`    | W plikach pomocy Vim przechodzi do linku pod kursorem         |
 | `<leader>h`    | W plikach pomocy Vim przechodzi do poprzedniej strony         |
-| `<leader>y`    | Kopiowanie obiektu tekstowego przez SSH `<leader>yap`         |
+| `<leader>c`    | Kopiowanie obiektu tekstowego przez SSH `<leader>cap`         |
+| `<leader>cc`   | Kopiowanie zaznaczonego tekstu przez SSH                      |
 
 ### Skróty klawiszowe trybie VISUAL
 
 | Skrót          | Opis                                                          |
 |----------------|---------------------------------------------------------------|
 | `<c-/>`        | Uruchamia plugin Commentary na zaznaczonych liniach           |
-| `<leader>y`    | Kopiowanie zaznaczonego tekstu przez SSH                      |
+| `<leader>c`    | Kopiowanie zaznaczonego tekstu przez SSH                      |
 
 ### Skróty klawiszowe terminal
 
