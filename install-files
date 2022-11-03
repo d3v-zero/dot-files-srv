@@ -1,6 +1,8 @@
 .bashrc
 .config/aliasy
 .config/nvim/init.vim
+.config/nvim/cd
+.config/nvim/kolory
 .config/starship.toml
 .config/vars
 .tmux.conf

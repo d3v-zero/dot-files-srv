@@ -304,6 +304,12 @@ function! CD()
         \ 'options' : '-m -x +s'}))
 endfunction
 
+" kopiuje ścieżkę otwartego pliku do schowka systemowego
+function! CPP()
+    let @+=expand('%:p')
+endfunction
+
+command! CPP call CPP()
 command! CD call CD()
 command! Kolory call Kolory()
 command! ToggleVimTips call ToggleVimTips()
