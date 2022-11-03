@@ -45,6 +45,7 @@ set softtabstop=4
 set expandtab
 set smarttab
 set smartindent
+set nowrap
 set whichwrap+=<,>,h,l
 set laststatus=2
 set incsearch
@@ -55,6 +56,8 @@ set fillchars=eob:=  " usuwa znak `~` na końcu bufora
 set iskeyword+=-,.   " neutralizuje seperatory słowa `-` oraz `.`
 set cmdheight=1
 set cursorline
+set textwidth=100
+set colorcolumn=+1
 set lazyredraw
 set updatetime=300
 set timeout
@@ -139,6 +142,8 @@ nnoremap <leader>5 :Write<cr>:!./%<cr>
 
 nmap gh 0
 nmap gl $
+nmap j gj
+nmap k gk
 nmap dh xd0
 nmap dl d$
 nmap Y y$
@@ -160,6 +165,7 @@ nmap <c-p> <plug>(signify-prev-hunk)
 let g:floaterm_keymap_toggle = '<leader>t'
 let g:floaterm_keymap_kill = '<leader>k'
 
+" poruszanie się po plikach pomocy
 autocmd Filetype help nnoremap <leader>l <c-]>
 autocmd Filetype help nnoremap <leader>h <c-t>
 
@@ -168,7 +174,10 @@ autocmd FileType apache setlocal commentstring=#\ %s
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent! loadview
 
-" indentLine
+" wyróżnienie kopiowanego tekstu, wyłączone w trybie VISUAL
+autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=77}
+
+" plugin indentLine
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 1
@@ -213,7 +222,7 @@ function! RevBackground()
 endfunction
 
 function! Time()
-    let time=strftime("Jest: %F %T")
+    let time=strftime("Jest: %T %F")
     echo time
 endfunction
 
@@ -301,3 +310,6 @@ command! Time call Time()
 command! RevBackground call RevBackground()
 command! Write call Write()
 command! PI :PlugInstall
+
+abbr time Time
+abbr gp GP
