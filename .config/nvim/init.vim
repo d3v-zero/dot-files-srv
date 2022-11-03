@@ -318,4 +318,4 @@ command! PI :PlugInstall
 
 cabbr time Time
 cabbr gp GP
-cabbr pi
+cabbr pi PI
