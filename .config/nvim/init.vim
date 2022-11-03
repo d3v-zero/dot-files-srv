@@ -316,5 +316,6 @@ command! RevBackground call RevBackground()
 command! Write call Write()
 command! PI :PlugInstall
 
-abbr time Time
-abbr gp GP
+cabbr time Time
+cabbr gp GP
+cabbr pi
