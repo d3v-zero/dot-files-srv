@@ -132,6 +132,7 @@ tmap <c-j> <c-\><c-n><c-w>j
 tmap <c-k> <c-\><c-n><c-w>k
 tmap <c-l> <c-\><c-n><c-w>l
 
+" <leader>yap kopiuje akapit
 nmap <leader>y <Plug>OSCYank
 vnoremap <leader>y :OSCYank<CR>
 
