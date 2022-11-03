@@ -149,6 +149,10 @@ nmap dl d$
 nmap Y y$
 nnoremap J maJ`a
 nnoremap gf :edit <cfile><cr>
+nmap <cr> o
+nmap <s-cr> O
+" ^M tworzymy za pomocą kombinacji: <ctrl-v> <shift+enter>
+" nmap  O  
 
 inoremap <expr> <TAB> pumvisible() ? "<C-y>":"<TAB>"
 
@@ -158,6 +162,7 @@ cmap <c-h> <left>
 cmap <c-l> <right>
 
 cmap <c-r>p <c-r>"
+cmap <c-cr> <c-r>"
 
 nmap <c-n> <plug>(signify-next-hunk)
 nmap <c-p> <plug>(signify-prev-hunk)
