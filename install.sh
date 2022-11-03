@@ -9,6 +9,7 @@ BIN_DIR="$HOME/bin"
 mkdir -p "$BACKUP_DIR"
 mkdir -p "$BIN_DIR"
 mkdir -p "$HOME/tmp"
+mkdir -p "$HOME/.config/nvim"
 
 function aliasy() {
     cd "$HOME"
