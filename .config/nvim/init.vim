@@ -3,7 +3,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
+" {{{ --- pluginy
 call plug#begin()
     Plug 'ayu-theme/ayu-vim'                    " schemat kolorystyczny
     Plug 'bluz71/vim-nightfly-guicolors'        " schemat kolorystyczny
@@ -30,7 +30,8 @@ call plug#begin()
     Plug 'voldikss/vim-floaterm'                " latający terminal
     Plug 'Yggdroot/indentLine'                  " pionowe prowadnice
 call plug#end()
-
+" }}} --- pluginy
+" {{{ --- opcje
 syntax on
 set hidden
 set number
@@ -83,10 +84,27 @@ set viminfo+=n$HOME/.config/nvim/viminfo/viminfo
 set viewdir=$HOME/.config/nvim/view
 set viewoptions-=options
 set signcolumn=yes:1
+set foldmethod=marker
 colorscheme kanagawa
-
-" Skróty klawiszowe
+" }}} --- opcje
+" {{{ --- skróty klawiszowe
 let mapleader="\<space>"
+
+nnoremap zn zm
+nnoremap zm zn
+nmap gh 0
+nmap gl $
+nmap j gj
+nmap k gk
+nmap dh xd0
+nmap dl d$
+nmap Y y$
+nnoremap J maJ`a
+nnoremap gf :edit <cfile><cr>
+nmap <cr> o
+nmap <s-cr> O
+" symbol ^M generujemy pomocą kombinacji: <ctrl-v> <shift+enter>
+" nmap  O  
 
 nmap <leader>w :Write<cr>
 nmap <leader>x :Write<cr>:quit<cr>
@@ -149,21 +167,6 @@ lua << EOF
 EOF
 
 nnoremap <leader>5 :Write<cr>:!./%<cr>
-
-nmap gh 0
-nmap gl $
-nmap j gj
-nmap k gk
-nmap dh xd0
-nmap dl d$
-nmap Y y$
-nnoremap J maJ`a
-nnoremap gf :edit <cfile><cr>
-nmap <cr> o
-nmap <s-cr> O
-" symbol ^M generujemy pomocą kombinacji: <ctrl-v> <shift+enter>
-" nmap  O  
-
 inoremap <expr> <TAB> pumvisible() ? "<C-y>":"<TAB>"
 
 cmap <c-k> <up>
@@ -183,7 +186,8 @@ let g:floaterm_keymap_kill = '<leader>k'
 " poruszanie się po plikach pomocy
 autocmd Filetype help nnoremap <leader>l <c-]>
 autocmd Filetype help nnoremap <leader>h <c-t>
-
+" }}} --- skróty klawiszowe
+" {{{ --- autocmd
 autocmd FileType apache setlocal commentstring=#\ %s
 
 autocmd BufWinLeave *.* mkview
@@ -191,7 +195,8 @@ autocmd BufWinEnter *.* silent! loadview
 
 " wyróżnienie kopiowanego tekstu, wyłączone w trybie VISUAL
 autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=77}
-
+" }}} --- autocmd
+" {{{ --- konfiguracja pluginów
 " plugin indentLine
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
@@ -226,7 +231,8 @@ let g:hackline_custom_end = '
             \'
 
 lua require('leap').add_default_mappings()
-
+" }}} --- konfiguracja pluginów
+" {{{ --- funkcje
 function! RevBackground()
     if &background=="light"
         set background=dark
@@ -317,7 +323,8 @@ endfunction
 function! CPP()
     let @+=expand('%:p')
 endfunction
-
+" }}} --- funkcje
+" {{{ --- komendy
 command! CPP call CPP()
 command! CD call CD()
 command! Kolory call Kolory()
@@ -330,11 +337,12 @@ command! Time call Time()
 command! RevBackground call RevBackground()
 command! Write call Write()
 command! PI :PlugInstall
-
+" }}} --- komendy
+" {{{ --- abbr
 cabbr time Time
 cabbr gp GP
 cabbr pi PI
-
+" }}} --- abbr
 if ! empty(glob('$HOME/.config/nvim/custom.vim'))
     silent! source $HOME/.config/nvim/custom.vim
 endif

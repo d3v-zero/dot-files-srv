@@ -47,6 +47,8 @@
 | `dl`           | Kasuje od kursora do końca linii                              |
 | `Y`            | Kopiuje od kursora do końca linii                             |
 | `J`            | Łączy linie                                                   |
+| `zn`           | Zastępuje skrót `zm` zamknięcie zawinięcia                    |
+| `zm`           | Zastępuje skrót `zn` otworzenie zawinięcia                    |
 | `<c-/>`        | Uruchamia plugin Commentary w bieżącej linii                  |
 | `<c-n>`        | Przechodzi do następnej zmiany plugin Signify                 |
 | `<c-p>`        | Przechodzi do poprzedniej zmiany plugin Signify               |
