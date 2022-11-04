@@ -103,6 +103,8 @@ nnoremap J maJ`a
 nnoremap gf :edit <cfile><cr>
 nmap <cr> o
 nmap <s-cr> O
+nmap + <c-a>
+nmap - <c-x>
 " symbol ^M generujemy pomocą kombinacji: <ctrl-v> <shift+enter>
 " nmap  O  
 
@@ -198,7 +200,7 @@ autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higro
 " }}} --- autocmd
 " {{{ --- konfiguracja pluginów
 " plugin indentLine
-let g:indentLine_first_char = ''
+let g:indentLine_first_char = ' '
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 1
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -227,7 +229,7 @@ let g:hackline_custom_end = '
             \%(%{&fileformat} %)
             \%l/%L %v
             \%( %{hackline_hostname} %)
-            \%{strftime("%H:%M")}
+            \%{strftime("%H:%M %y-%m-%d")}
             \'
 
 lua require('leap').add_default_mappings()
