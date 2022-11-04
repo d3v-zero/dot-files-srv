@@ -343,6 +343,8 @@ cabbr time Time
 cabbr gp GP
 cabbr pi PI
 " }}} --- abbr
+" {{{ --- custom config
 if ! empty(glob('$HOME/.config/nvim/custom.vim'))
     silent! source $HOME/.config/nvim/custom.vim
 endif
+" }}} --- custom config
