@@ -55,6 +55,7 @@ alias cryptsetup="$SUDO cryptsetup"
 
 alias b=bat
 alias cs="clear"
+alias cls="clear"
 alias h="history"
 alias man="$HOME/bin/man-nvim.sh"
 alias more="less"
@@ -64,17 +65,13 @@ alias so=source
 alias svim="$SUDO nvim"
 alias t=tmux
 alias b=bat
-alias c=cat
 alias c=bat
+alias cat="bat --plain"
 alias ta="tmux atta"
 alias wg="$SUDO wg"
 alias wg="$SUDO wg"
 alias ta="$HOME/bin/ta.sh"
 alias tls="tmux ls"
-alias c=cat
-alias b=bat
-alias cat="bat --plain"
-alias cls="clear"
 
 # Procesy
 
