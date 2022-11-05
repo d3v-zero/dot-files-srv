@@ -16,6 +16,7 @@ call plug#begin()
     Plug 'mbbill/undotree'                      " drzewo zmian
     Plug 'mhinz/vim-signify'                    " wizualna pomoc przy pepozytoriach git
     Plug 'morhetz/gruvbox'                      " schemat kolorystyczny
+    " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'ojroques/nvim-osc52'                  " kopiowanie tekstu z Vim przez SSH 
     Plug 'overcache/NeoSolarized'               " schemat kolorystyczny
     Plug 'preservim/nerdtree'                   " menadżer plików
@@ -155,6 +156,20 @@ tmap <c-l> <c-\><c-n><c-w>l
 
 nmap <c-_> :Commentary<cr>
 vmap <c-_> :Commentary<cr>
+
+" " lua << EOF
+" require'nvim-treesitter.configs'.setup {
+"   ensure_installed = { "bash", "lua", "vim" },
+"   highlight = {
+"     enable = true,
+"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
+"     -- Instead of true it can also be a list of languages
+"     additional_vim_regex_highlighting = true,
+"   },
+" }
+" EOF
 
 lua << EOF
     require('osc52').setup {
