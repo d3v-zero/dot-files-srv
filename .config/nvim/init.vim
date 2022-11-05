@@ -157,16 +157,12 @@ tmap <c-l> <c-\><c-n><c-w>l
 nmap <c-_> :Commentary<cr>
 vmap <c-_> :Commentary<cr>
 
-" " lua << EOF
+" lua << EOF
 " require'nvim-treesitter.configs'.setup {
 "   ensure_installed = { "bash", "lua", "vim" },
 "   highlight = {
 "     enable = true,
-"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
-"     -- Instead of true it can also be a list of languages
-"     additional_vim_regex_highlighting = true,
+"     additional_vim_regex_highlighting = false,
 "   },
 " }
 " EOF
