@@ -1,3 +1,4 @@
+BIN_DIR=$HOME/bin
 EDITOR=nvim
-SUDO=sudo
 GPG_ID=""
+SUDO=sudo

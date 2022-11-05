@@ -55,7 +55,7 @@ set ignorecase
 set smartcase
 set wrapscan
 set fillchars=eob:\ ,fold:\  " usuwa znak `~` na końcu bufora
-set iskeyword+=-,.   " neutralizuje seperatory słowa `-` oraz `.`
+set iskeyword+=-,.,_   " neutralizuje seperatory słowa `-` oraz `.`
 set cmdheight=1
 set cursorline
 set textwidth=100

@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
-. $HOME/bin/colors
+. $HOME/.config/vars
+. $BIN_DIR/colors
 
-case $($HOME/bin/detect-os.sh sys) in
+shopt -s nocasematch
+
+case $($BIN_DIR/detect-os.sh sys) in
     Fedora)
         msg_info "Wykryłem system Fedora"
         FEDORA=1
+        SYSTEM="Fedora"
         ;;
     Ubuntu)
         msg_info "Wykryłem system Ubuntu"
@@ -24,43 +28,51 @@ function check() {
 
 # nazwa komendy
 declare -a PAKIETY_FEDORA=(
-    "nvim"
-    "git"
-    "rg"
-    "fd"
-    "fzf"
-    "exa"
+    "nvim|neovim"
+    "git|git"
+    "rg|ripgrep"
+    "fd|fd-find"
+    "fzf|fzf"
+    "exa|exa"
 )
 
 # nazwa komendy
 declare -a PAKIETY_UBUNTU=(
-    "nvim"
-    "git"
-    "rg"
-    "fd"
-    "fzf"
-    "exa"
+    "nvim|neovim"
+    "git|git"
+    "rg|ripgrep"
+    "fd|fd"
+    "fzf|fzf"
+    "exa|exa"
 )
 
 if [[ $FEDORA ]]; then
+    PAKIETY_ARRAY=()
     for i in ${PAKIETY_FEDORA[@]}; do
-        check "$i"
+        KOMENDA=$(echo $i | cut -d '|' -f 1)
+        PAKIET=$(echo $i | cut -d '|' -f 2)
+        PAKIETY_ARRAY+=("$PAKIET")
+        check "$KOMENDA"
     done
 
     echo
     msg_info "Jeśli brakuje jakiegoś pakietu uruchom polecenie:"
     echo
-    echo "sudo dnf install ${PAKIETY_FEDORA[@]}"
+    echo "sudo dnf install ${PAKIETY_ARRAY[@]}"
     echo
 fi
 
 if [[ $UBUNTU ]]; then
+    PAKIETY_ARRAY=()
     for i in ${PAKIETY_UBUNTU[@]}; do
-        check "$1"
+        KOMENDA=$(echo $i | cut -d '|' -f 1)
+        PAKIET=$(echo $i | cut -d '|' -f 2)
+        PAKIETY_ARRAY+=("$PAKIET")
+        check "$KOMENDA"
     done
 
     echo
     msg_info "Jeśli brakuje jakiegoś pakietu uruchom polecenie:"
     echo
-    echo "sudo apt install ${PAKIETY_UBUNTU[@]}"
+    echo "sudo apt install ${PAKIETY_ARRAY[@]}"
 fi
