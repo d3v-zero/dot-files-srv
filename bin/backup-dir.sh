@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+shopt -s nocasematch
+
 XZ_OPT=-8
 SHRED=$(which shred)
 DATA=$(date +%y%m%d-%H%M)
@@ -13,7 +15,7 @@ echo -n "Zaszyfrować plik? (t/N): "
 read szyfrowanie
 
 case $szyfrowanie in
-    t|T)
+    t)
         gpg -c "$DIR"-"$DATA".txz
         echo "Zapisano "$DIR"-"$DATA".txz.gpg w katalogu "$PWD""
         if [ $SHRED ]; then

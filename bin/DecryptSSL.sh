@@ -5,6 +5,7 @@ if [[ $# < 1 ]]; then
     echo $ dec plik.txt.enc
     return 1
 fi
+
 if [ ! -e $1 ]; then
     echo "Podany plik ($1) nie istnieje."
     return 1

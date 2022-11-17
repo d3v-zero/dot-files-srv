@@ -2,7 +2,7 @@
 
 # alias do edycji skryptu to: .df
 
-. ~/.config/vars
+. $HOME/.config/vars
 
 ARR=(
     ~/.bashrc

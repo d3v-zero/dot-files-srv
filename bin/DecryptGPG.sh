@@ -5,6 +5,7 @@ if [[ $# < 1 ]]; then
     echo $ enc plik.txt
     return 1
 fi
+
 if [ ! -e "$1" ]; then
     echo Podany plik nie istnieje
 else
