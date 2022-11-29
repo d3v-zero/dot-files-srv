@@ -22,6 +22,10 @@ alias ...="cd ../.."
 alias ..="cd .."
 alias path="echo $PATH|tr \":\" \"\n\""
 
+alias cdb="$HOME/bin/cdb.sh"
+alias cdba="$HOME/bin/cdba.sh"
+alias cdbd="$HOME/bin/cdbd.sh"
+
 alias dchmod="$HOME/bin/dchmod.sh"
 alias fchmod="$HOME/bin/fchmod.sh"
 
