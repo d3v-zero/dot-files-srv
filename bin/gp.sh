@@ -2,6 +2,8 @@
 
 DATA=$(date +%F-%T)
 
+git pull
+
 if [ $# -eq 1 ]; then
     KATALOG=$(readlink -m $(dirname "$1"))
     cd "$KATALOG"
