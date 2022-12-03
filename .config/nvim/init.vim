@@ -173,7 +173,6 @@ lua << EOF
         silent = false,  -- Disable message on successful copy
         trim = false,    -- Trim text before copy
     }
-
     vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, {expr = true})
     vim.keymap.set('n', '<leader>cc', '<leader>c_', {remap = true})
     vim.keymap.set('x', '<leader>c', require('osc52').copy_visual)
@@ -205,6 +204,8 @@ autocmd FileType apache setlocal commentstring=#\ %s
 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent! loadview
+
+autocmd Filetype markdown setlocal conceallevel=0
 
 " wyróżnienie kopiowanego tekstu, wyłączone w trybie VISUAL
 autocmd TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=77}
@@ -351,11 +352,6 @@ command! RevBackground call RevBackground()
 command! Write call Write()
 command! PI :PlugInstall
 " }}} --- komendy
-" {{{ --- abbr
-" cabbr time Time
-" cabbr gp GP
-" cabbr pi PI
-" }}} --- abbr
 " {{{ --- custom config
 if ! empty(glob('$HOME/.config/nvim/custom.vim'))
     silent! source $HOME/.config/nvim/custom.vim
